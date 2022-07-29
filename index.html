@@ -14,56 +14,8 @@
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-PHM7HWN');</script>
-    <!-- End Google Tag Manager -->
-    <script>
-        function logEvent(name, params) {
-            if (!name) {
-                return;
-            }
-
-            if (window.AnalyticsWebInterface) {
-                // Call Android interface
-                window.AnalyticsWebInterface.logEvent(name, JSON.stringify(params));
-            } else if (window.webkit
-                && window.webkit.messageHandlers
-                && window.webkit.messageHandlers.firebase) {
-                // Call iOS interface
-                var message = {
-                command: 'logEvent',
-                name: name,
-                parameters: params
-                };
-                window.webkit.messageHandlers.firebase.postMessage(message);
-            } else {
-                // No Android or iOS interface found
-                console.log("No native APIs found.");
-            }
-            }
-
-            function setUserProperty(name, value) {
-            if (!name || !value) {
-                return;
-            }
-
-            if (window.AnalyticsWebInterface) {
-                // Call Android interface
-                window.AnalyticsWebInterface.setUserProperty(name, value);
-            } else if (window.webkit
-                && window.webkit.messageHandlers
-                && window.webkit.messageHandlers.firebase) {
-                // Call iOS interface
-                var message = {
-                command: 'setUserProperty',
-                name: name,
-                value: value
-            };
-                window.webkit.messageHandlers.firebase.postMessage(message);
-            } else {
-                // No Android or iOS interface found
-                console.log("No native APIs found.");
-            }
-        }
+        })(window,document,'script','dataLayer','GTM-PHM7HWN');
     </script>
+    <!-- End Google Tag Manager -->
 </body>
 </html>
