@@ -9,29 +9,13 @@
 <body>
     APP-STREAM-TEST
     <button type="button" onclick="logEvent('tap_button',{'param_foo':'key_bar','param_baz':'key_qux'})">logEvent Test Button</button>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyDcgl4ZlyO5xDQ3iTm5fP-KOFjH_SAMusc",
-          authDomain: "app-stream-test.firebaseapp.com",
-          projectId: "app-stream-test",
-          storageBucket: "app-stream-test.appspot.com",
-          messagingSenderId: "537383569551",
-          appId: "1:537383569551:web:6fb6143727a47aa3a508fa",
-          measurementId: "G-4GZP8CHEY6"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PHM7HWN');</script>
+    <!-- End Google Tag Manager -->
     <script>
         function logEvent(name, params) {
             if (!name) {
